@@ -1,0 +1,122 @@
+.navbar-wrapper {
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.bling_1qntais {
+    padding: 0px 10px 0px 10px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-register-wrapper {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    
+
+    h2 {
+        font-size: 2em;
+        margin: 10px;
+    }
+
+    input {
+        margin: 5px;
+    }
+
+    button {
+        margin-left: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(105%);
+            background-color: darkcyan;
+        }
+    }
+}
+
+.logo {
+    font-size: 2em;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 5px;
+    padding: 5px;
+    background-color: black;
+    color: aqua;
+    
+}
+
+.user-login-wrapper {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    
+
+    h2 {
+        font-size: 2em;
+        margin: 10px;
+    }
+
+    input {
+        margin: 5px;
+    }
+
+    button {
+        margin-left: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(105%);
+            background-color: darkcyan;
+        }
+    }
+}
+
+.navlinks-wrapper {
+    font-size: 1.3em;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        color: blue;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+            color: darkblue;
+            text-decoration: underline;
+        }
+            
+    }
+
+    .active {
+        text-decoration: underline;
+    }
+}
+
+.greeting {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    font-size: 1.5em;
+
+    button {
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(105%);
+            background-color: darkcyan;
+        }
+    }
+}
