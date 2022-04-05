@@ -26,7 +26,7 @@ export default class App extends Component {
 
   componentDidMount() {
     if (Cookies.get("username")) {
-      fetch("https://my-family-website-ccl-frontend.herokuapp.com/user/get")
+      fetch(`https://my-family-website-ccl-frontend.herokuapp.com/user/get`)
       .then(response => response.json())
       .then(data => {
         const userData = data.filter(user => user.username == Cookies.get("username"))[0]
@@ -36,7 +36,7 @@ export default class App extends Component {
   }
 
   handleSuccesfulLogin(username) {
-    fetch("https://my-family-website-ccl-frontend.herokuapp.com/user/get")
+    fetch(`https://my-family-website-ccl-frontend.herokuapp.com/user/get`)
     .then(response => response.json())
     .then(data => {
       const userData = data.filter(user => user.username == username)[0]

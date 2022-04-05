@@ -66,7 +66,7 @@ export default class Events extends Component {
 }
 
   getData() {
-    fetch("https://my-family-website-ccl-frontend.herokuapp.com/event/get", {
+    fetch(`https://my-family-website-ccl-frontend.herokuapp.com/event/get`, {
     })
     .then((response) => response.json())
     .then(
@@ -84,7 +84,7 @@ export default class Events extends Component {
       })
     }
   handleSubmit(e) {
-    return fetch("https://my-family-website-ccl-frontend.herokuapp.com/event/add", {
+    return fetch(`https://my-family-website-ccl-frontend.herokuapp.com/event/add`, {
         method: "post",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
