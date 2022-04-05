@@ -23,7 +23,7 @@ export default class Registration extends Component {
     handleSubmit(event) {
         event.preventDefault()
 
-        fetch("https://git.heroku.com/my-family-website-ccl.git/user/add", {
+        fetch("https://my-family-website-ccl-frontend.herokuapp.com/user/add", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({

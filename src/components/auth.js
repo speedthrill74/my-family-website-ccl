@@ -24,7 +24,7 @@ export default class Auth extends Component {
     handleSubmit(event) {
         event.preventDefault()
 
-        fetch("https://git.heroku.com/my-family-website-ccl.git/user/login", {
+        fetch("https://my-family-website-ccl-frontend.herokuapp.com/user/login", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
