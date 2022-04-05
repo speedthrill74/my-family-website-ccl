@@ -70,7 +70,7 @@ export default class Chat extends Component {
 }
 
   getData() {
-    fetch("http://127.0.0.1:5000/post/get", {
+    fetch("https://git.heroku.com/my-family-website-ccl.git/post/get", {
     })
     .then((response) => response.json())
     .then(
@@ -90,7 +90,7 @@ export default class Chat extends Component {
   handleSubmit(e) {
     // const form = event.currentTarget;
     // const inputValue = form.elements["text", "user"].value;
-    return fetch("http://127.0.0.1:5000/post/add", {
+    return fetch("https://git.heroku.com/my-family-website-ccl.git/post/add", {
         method: "post",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({

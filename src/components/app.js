@@ -26,7 +26,7 @@ export default class App extends Component {
 
   componentDidMount() {
     if (Cookies.get("username")) {
-      fetch("http://127.0.0.1:5000/user/get")
+      fetch("https://git.heroku.com/my-family-website-ccl.git/user/get")
       .then(response => response.json())
       .then(data => {
         const userData = data.filter(user => user.username == Cookies.get("username"))[0]
@@ -36,7 +36,7 @@ export default class App extends Component {
   }
 
   handleSuccesfulLogin(username) {
-    fetch("http://127.0.0.1:5000/user/get")
+    fetch("https://git.heroku.com/my-family-website-ccl.git/user/get")
     .then(response => response.json())
     .then(data => {
       const userData = data.filter(user => user.username == username)[0]
