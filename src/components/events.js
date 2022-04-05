@@ -66,7 +66,7 @@ export default class Events extends Component {
 }
 
   getData() {
-    fetch("http://127.0.0.1:5000/event/get", {
+    fetch("https://git.heroku.com/my-family-website-ccl.git/event/get", {
     })
     .then((response) => response.json())
     .then(
@@ -84,7 +84,7 @@ export default class Events extends Component {
       })
     }
   handleSubmit(e) {
-    return fetch("http://127.0.0.1:5000/event/add", {
+    return fetch("https://git.heroku.com/my-family-website-ccl.git/event/add", {
         method: "post",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
