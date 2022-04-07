@@ -66,7 +66,7 @@ export default class Events extends Component {
 }
 
   getData() {
-    fetch("https://my-family-website-ccl-frontend.herokuapp.com/event/get", {
+    fetch("http://127.0.0.1:5000/event/get", {
     })
     .then((response) => response.json())
     .then(

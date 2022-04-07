@@ -19,8 +19,8 @@ export default class Chat extends Component {
         this.state = {
             error: undefined,
             isLoaded: false,
-            text: [],
-            user: [],
+            "text": "",
+            "user": "",
             data: [],
             showModal: false
         };
@@ -61,9 +61,9 @@ export default class Chat extends Component {
     window.location.reload(false);
 }
 
-  handleChange(e) {
+  handleChange(event) {
     this.setState({
-      [e.target.name] : e.target.value
+      [event.target.name] : event.target.value
     });
     event.preventDefault(event)
     console.log(this.State)  
@@ -87,18 +87,17 @@ export default class Chat extends Component {
         });
       })
     }
-  handleSubmit(e) {
-    // const form = event.currentTarget;
-    // const inputValue = form.elements["text", "user"].value;
-    return fetch("https://my-family-website-ccl-frontend.herokuapp.com/post/add", {
+  handleSubmit(event) {
+    fetch("https://my-family-website-ccl-frontend.herokuapp.com/post/add", {
         method: "post",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-            text: this.state.text,
-            user: this.state.user
+            "text": "",
+            "user": ""
         })
     })
-    event.preventDefault(event)
+    event.preventDefault(e)
+    console.log(result)
   }
     
   render() {
@@ -122,7 +121,7 @@ export default class Chat extends Component {
             <button onClick={this.handleOpenModal}>Create Post</button>
             <Modal 
                isOpen={this.state.showModal}
-               onSubmit={this.handleSubmit(event)}
+               onSubmit={this.handleSubmit}
                contentLabel="Modal"
             >
               <h2>Chat</h2>
@@ -140,7 +139,7 @@ export default class Chat extends Component {
               <label>
                 User:
               </label><br/>
-              <input type="user"
+              <input type="text"
                      onChange={this.handleChange}
                      name="user"
                      placeholder="Add Name Here"
